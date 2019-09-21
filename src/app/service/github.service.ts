@@ -7,8 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class GithubService {
 
  username:string;
-  clientID:string = '66e2af26af6ff2c4ea28';
-  clientSecret:string = '5397f3377ca615ef3efc7553002940760ccd989a';
+  
 
   constructor(private http:HttpClient) { }
   public getUser(n){
