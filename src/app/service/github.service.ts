@@ -10,15 +10,15 @@ export class GithubService {
   
 
   constructor(private http:HttpClient) { }
-  public getUser(n){
-    console.log(n);
+  public getUser(user){
+    console.log(user);
     
-    return this.http.get("https://api.github.com/users/"+n);
+    return this.http.get("https://api.github.com/users/"+user);
   }
 
-  GetRepos(ns) {
-    console.log(ns);
-    return this.http.get('http://api.github.com/users/'+ns+'/repos');
+  GetRepos(resp) {
+    console.log(resp);
+    return this.http.get('http://api.github.com/users/'+resp+'/repos');
    
   }
 }
