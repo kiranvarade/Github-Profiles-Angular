@@ -3,14 +3,13 @@
 		<form>
 			<div class="form-group">
 				<input class='form-control' type="text" 
-				placeholder="Search for github users" 
-				[(ngModel)] ='username'
-				name='username'>
-				<!-- (keyup)='searchUser()'  -->
-				<br>
-				<div class="form-group">
-					<button class="btn btn-primary" (click)="searchUser()" > Search </button>
-				</div>		
+                placeholder="Search for github users" 
+                [(ngModel)] ='username'
+                name='username'
+                (keyup)='searchUser()'>  
+	    <!-- 	<div class="form-group">
+			      		<button class="btn btn-primary" (click)="searchUser()" > Search </button>
+			    	</div>	-->
 			</div>
 		</form>
 	</div>
@@ -41,11 +40,8 @@
 						<li class="list-group-item"><strong>Email  </strong>{{ userInfo.email}}</li>
 						<li *ngIf='userInfo.blog' class="list-group-item"><strong>Blog  </strong>{{ userInfo.blog}}</li>
 						<li class="list-group-item"><strong>Member since  </strong>{{ userInfo.created_at}}</li>
-
-
-					</ul>
-
-				</div>
+        	</ul>
+      	</div>
 			</div>
 		</div>
 	</div>
